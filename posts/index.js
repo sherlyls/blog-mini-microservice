@@ -14,6 +14,7 @@ app.get('/posts', (req, res) => {
 app.post('/posts', (req, res) => {
     const id = randomBytes(4).toString('hex')
     const { title } = req.body
+    console.log({lihat: req.params})
 
     posts[id] = {
         id, title
@@ -22,6 +23,6 @@ app.post('/posts', (req, res) => {
     res.status(201).send(posts[id]);
 })
 
-app.listen(4001, () => {
-    console.log('Listening on 4001')
+app.listen(4000, () => {
+    console.log('Listening on 4000')
 })
