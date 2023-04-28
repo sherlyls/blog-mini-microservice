@@ -21,7 +21,6 @@ app.post('/posts/:id/comments', (req, res) => {
 
     commentsByPostId[req.params.id] = comments
 
-
 })
 
 app.listen(4001, () => {

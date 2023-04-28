@@ -14,13 +14,14 @@ app.get('/posts', (req, res) => {
 app.post('/posts', (req, res) => {
     const id = randomBytes(4).toString('hex')
     const { title } = req.body
-    console.log({lihat: req.params})
-
+    
     posts[id] = {
         id, title
     }
 
-    res.status(201).send(posts[id]);
+    console.log({kekmana: posts})
+
+    res.status(201).send(posts);
 })
 
 app.listen(4000, () => {
