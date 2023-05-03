@@ -10,7 +10,7 @@ app.use(cors()) //cors wire up with express application as middleware
 const posts = {};
 
 app.get('/posts', (req, res) => {
-    res.send(posts)
+    res.send(posts)``
 })
 
 app.post('/posts', (req, res) => {
