@@ -5,7 +5,7 @@ const axios = require('axios')
 const app = express()
 app.use(bodyParser)
 
-app.post('/posts', (req, res) => {
+app.post('/events', (req, res) => {
     const { event } = req.body
 
     axios.post('http://localhost:4000/events', event)
@@ -15,4 +15,6 @@ app.post('/posts', (req, res) => {
     res.send({ status: 'OK'})
 })
 
-app.listen(4005)
+app.listen(4005, () => {
+    console.log('Listening on 4005')
+})
